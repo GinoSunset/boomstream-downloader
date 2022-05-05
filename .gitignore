@@ -1,0 +1,6 @@
+venv/
+downloads/
+result.html
+boomstream.*
+*.mp4
+.vscode
