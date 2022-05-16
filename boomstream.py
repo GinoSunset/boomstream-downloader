@@ -44,8 +44,9 @@ class App:
     @cached_property
     def title(self):
         title = self.config["meta"]["title"]
+        title = re.sub(r'[^\w\-_\. ]', '_', title)
         return os.path.join(
-            self.args.output_dir, os.path.splitext(title)[0].replace(" ", "_")
+            self.args.output_dir, os.path.splitext(title)[0]
         )
 
     def get_token(self):
